@@ -61,18 +61,6 @@
 │   └── ...
 └── README.md     # Documentación principal
 ```
-
----
-
-## Instalación y Ejecución
-
-1. **Clona el repositorio:**
-   ```bash
-   git clone <URL-del-repositorio>
-   ```
-2. **Abre el archivo `html/index.html` en tu navegador.**
-3. **No requiere instalación de dependencias externas para la versión web local.**
-
 ---
 
 ## Guía de Uso
@@ -115,8 +103,3 @@
 - **User Story Mapping:** Consulta el archivo `html/user_story_mapping_definitve.html` para ver la organización de épicas y releases.
 
 ---
-
-## Créditos
-
-Desarrollado por el equipo de Kronoss.  
-© 2025 Kronoss. Todos los derechos reservados. 
