@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kronoss - Foro de la Comunidad</title>
+    <link rel="stylesheet" href="../CSS/styles-foro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Añadir preconexión para mejorar rendimiento -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://randomuser.me">
+</head>
+<body>
+    <!-- Overlay para menú móvil -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    
+    <div class="container">
+        <!-- Sidebar lateral izquierdo -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <h1>Kronoss</h1>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="dashboard-usuario.html"><i class="fas fa-chart-line"></i> Mi Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-check"></i> Mis Recordatorios</a></li>
+                    <li><a href="#"><i class="fas fa-plus-circle"></i> Crear Recordatorio</a></li>
+                    <li class="active"><a href="foro.html"><i class="fas fa-comments"></i> Foro</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Configuración</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>© 2025 Kronoss</p>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="content">
+            <!-- Barra superior con perfil de usuario -->
+            <header class="top-bar">
+                <div class="mobile-toggle">
+                    <button id="sidebar-toggle"><i class="fas fa-bars"></i></button>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar en el foro...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-profile">
+                    <div class="theme-toggle">
+                        <button id="theme-switch">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="profile">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Foto de perfil">
+                        <div class="profile-info">
+                            <h3>Laura Sánchez</h3>
+                            <p>Usuario</p>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Contenido del Foro -->
+            <div class="forum-container">
+                <div class="forum-header">
+                    <h2>Foro de la Comunidad Kronoss</h2>
+                    <button id="create-topic" class="primary-btn"><i class="fas fa-plus"></i> Crear Nuevo Tema</button>
+                </div>
+
+                <!-- Categorías del Foro -->
+                <div class="forum-categories">
+                    <div class="category-header">
+                        <h3>Categorías</h3>
+                    </div>
+                    <div class="categories-grid">
+                        <div class="category-card" data-category="general">
+                            <div class="category-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="category-info">
+                                <h4>General</h4>
+                                <p>Discusiones generales sobre Kronoss</p>
+                                <span class="topic-count">24 temas</span>
+                            </div>
+                        </div>
+                        <div class="category-card" data-category="productividad">
+                            <div class="category-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="category-info">
+                                <h4>Productividad</h4>
+                                <p>Consejos y trucos para mejorar tu productividad</p>
+                                <span class="topic-count">18 temas</span>
+                            </div>
+                        </div>
+                        <div class="category-card" data-category="soporte">
+                            <div class="category-icon">
+                                <i class="fas fa-life-ring"></i>
+                            </div>
+                            <div class="category-info">
+                                <h4>Soporte Técnico</h4>
+                                <p>Ayuda con problemas técnicos</p>
+                                <span class="topic-count">12 temas</span>
+                            </div>
+                        </div>
+                        <div class="category-card" data-category="sugerencias">
+                            <div class="category-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="category-info">
+                                <h4>Sugerencias</h4>
+                                <p>Ideas para mejorar Kronoss</p>
+                                <span class="topic-count">15 temas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Temas Populares -->
+                <div class="popular-topics">
+                    <div class="section-header">
+                        <h3>Temas Populares</h3>
+                        <div class="filter-options">
+                            <select id="topic-filter">
+                                <option value="popular">Más populares</option>
+                                <option value="recent">Más recientes</option>
+                                <option value="active">Más activos</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="topics-list">
+                        <div class="topic-item">
+                            <div class="topic-avatar">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Avatar de usuario">
+                            </div>
+                            <div class="topic-content">
+                                <div class="topic-header">
+                                    <h4><a href="#" class="topic-link">¿Cómo organizar mejor mis recordatorios diarios?</a></h4>
+                                    <span class="topic-category productividad">Productividad</span>
+                                </div>
+                                <div class="topic-meta">
+                                    <span class="topic-author">Por: Juan Pérez</span>
+                                    <span class="topic-date">Hace 2 días</span>
+                                </div>
+                                <p class="topic-excerpt">Hola a todos, estoy buscando consejos para organizar mejor mis recordatorios diarios. Actualmente tengo muchos y se me hace difícil...</p>
+                            </div>
+                            <div class="topic-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-comment"></i>
+                                    <span>24</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-eye"></i>
+                                    <span>156</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-heart"></i>
+                                    <span>32</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="topic-item">
+                            <div class="topic-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Avatar de usuario">
+                            </div>
+                            <div class="topic-content">
+                                <div class="topic-header">
+                                    <h4><a href="#" class="topic-link">Sugerencia: Integración con Google Calendar</a></h4>
+                                    <span class="topic-category sugerencias">Sugerencias</span>
+                                </div>
+                                <div class="topic-meta">
+                                    <span class="topic-author">Por: Ana Martínez</span>
+                                    <span class="topic-date">Hace 3 días</span>
+                                </div>
+                                <p class="topic-excerpt">Me encantaría que Kronoss pudiera sincronizarse con Google Calendar. Sería muy útil para tener todos mis eventos en un solo lugar...</p>
+                            </div>
+                            <div class="topic-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-comment"></i>
+                                    <span>18</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-eye"></i>
+                                    <span>124</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-heart"></i>
+                                    <span>45</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="topic-item">
+                            <div class="topic-avatar">
+                                <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Avatar de usuario">
+                            </div>
+                            <div class="topic-content">
+                                <div class="topic-header">
+                                    <h4><a href="#" class="topic-link">Problema con las notificaciones en Android</a></h4>
+                                    <span class="topic-category soporte">Soporte Técnico</span>
+                                </div>
+                                <div class="topic-meta">
+                                    <span class="topic-author">Por: Carlos Rodríguez</span>
+                                    <span class="topic-date">Hace 1 día</span>
+                                </div>
+                                <p class="topic-excerpt">Desde la última actualización, no estoy recibiendo notificaciones en mi dispositivo Android. He revisado los ajustes pero no encuentro...</p>
+                            </div>
+                            <div class="topic-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-comment"></i>
+                                    <span>12</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-eye"></i>
+                                    <span>98</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-heart"></i>
+                                    <span>8</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pagination">
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn"><i class="fas fa-ellipsis-h"></i></button>
+                        <button class="page-btn">10</button>
+                        <button class="page-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal para crear nuevo tema -->
+    <div class="modal" id="new-topic-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Crear Nuevo Tema</h3>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="new-topic-form">
+                    <div class="form-group">
+                        <label for="topic-title">Título</label>
+                        <input type="text" id="topic-title" placeholder="Escribe un título descriptivo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="topic-category">Categoría</label>
+                        <select id="topic-category" required>
+                            <option value="">Selecciona una categoría</option>
+                            <option value="general">General</option>
+                            <option value="productividad">Productividad</option>
+                            <option value="soporte">Soporte Técnico</option>
+                            <option value="sugerencias">Sugerencias</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="topic-content">Contenido</label>
+                        <div class="rich-editor">
+                            <div class="editor-toolbar">
+                                <button type="button" class="toolbar-btn" data-format="bold"><i class="fas fa-bold"></i></button>
+                                <button type="button" class="toolbar-btn" data-format="italic"><i class="fas fa-italic"></i></button>
+                                <button type="button" class="toolbar-btn" data-format="underline"><i class="fas fa-underline"></i></button>
+                                <button type="button" class="toolbar-btn" data-format="link"><i class="fas fa-link"></i></button>
+                                <button type="button" class="toolbar-btn" data-format="image"><i class="fas fa-image"></i></button>
+                                <button type="button" class="toolbar-btn" data-format="list-ul"><i class="fas fa-list-ul"></i></button>
+                                <button type="button" class="toolbar-btn" data-format="list-ol"><i class="fas fa-list-ol"></i></button>
+                            </div>
+                            <textarea id="topic-content" placeholder="Escribe el contenido de tu tema aquí..." required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="topic-tags">Etiquetas (separadas por comas)</label>
+                        <input type="text" id="topic-tags" placeholder="ej: ayuda, recordatorios, móvil">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="secondary-btn cancel-btn">Cancelar</button>
+                        <button type="submit" class="primary-btn">Publicar Tema</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script-foro.js"></script>
+</body>
+</html> 

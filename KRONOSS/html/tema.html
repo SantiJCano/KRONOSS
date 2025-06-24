@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>¿Cómo organizar mejor mis recordatorios diarios? - Kronoss Foro</title>
+    <link rel="stylesheet" href="../CSS/styles-foro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Añadir preconexión para mejorar rendimiento -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://randomuser.me">
+</head>
+<body>
+    <!-- Overlay para menú móvil -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    
+    <div class="container">
+        <!-- Sidebar lateral izquierdo -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <h1>Kronoss</h1>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="dashboard-usuario.html"><i class="fas fa-chart-line"></i> Mi Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-check"></i> Mis Recordatorios</a></li>
+                    <li><a href="#"><i class="fas fa-plus-circle"></i> Crear Recordatorio</a></li>
+                    <li class="active"><a href="foro.html"><i class="fas fa-comments"></i> Foro</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Configuración</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>© 2025 Kronoss</p>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="content">
+            <!-- Barra superior con perfil de usuario -->
+            <header class="top-bar">
+                <div class="mobile-toggle">
+                    <button id="sidebar-toggle"><i class="fas fa-bars"></i></button>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar en el foro...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-profile">
+                    <div class="theme-toggle">
+                        <button id="theme-switch">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="profile">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Foto de perfil">
+                        <div class="profile-info">
+                            <h3>Laura Sánchez</h3>
+                            <p>Usuario</p>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Contenido del Tema -->
+            <div class="topic-container">
+                <div class="topic-navigation">
+                    <a href="foro.html" class="back-link"><i class="fas fa-arrow-left"></i> Volver al Foro</a>
+                    <div class="topic-actions">
+                        <button class="action-btn"><i class="fas fa-bookmark"></i> Guardar</button>
+                        <button class="action-btn"><i class="fas fa-share-alt"></i> Compartir</button>
+                        <button class="action-btn report-btn"><i class="fas fa-flag"></i> Reportar</button>
+                    </div>
+                </div>
+
+                <!-- Tema principal -->
+                <div class="topic-main">
+                    <div class="topic-header">
+                        <h2>¿Cómo organizar mejor mis recordatorios diarios?</h2>
+                        <span class="topic-category productividad">Productividad</span>
+                    </div>
+                    
+                    <div class="post main-post">
+                        <div class="post-sidebar">
+                            <div class="user-avatar">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Avatar de usuario">
+                            </div>
+                            <div class="user-info">
+                                <h4>Juan Pérez</h4>
+                                <p class="user-role">Usuario Activo</p>
+                                <p class="user-stats">124 publicaciones</p>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">Publicado: 10 de octubre, 2023 - 15:30</span>
+                                <span class="post-edited">Editado: 10 de octubre, 2023 - 16:45</span>
+                            </div>
+                            <div class="post-body">
+                                <p>Hola a todos,</p>
+                                <p>Estoy buscando consejos para organizar mejor mis recordatorios diarios. Actualmente tengo muchos y se me hace difícil mantener un seguimiento adecuado de todos ellos.</p>
+                                <p>He intentado algunas estrategias como:</p>
+                                <ul>
+                                    <li>Agruparlos por categorías (trabajo, personal, etc.)</li>
+                                    <li>Organizarlos por prioridad</li>
+                                    <li>Establecer horarios específicos</li>
+                                </ul>
+                                <p>Pero aún así siento que no estoy aprovechando al máximo las funcionalidades de Kronoss. ¿Alguien tiene sugerencias o métodos que le hayan funcionado bien?</p>
+                                <p>Gracias de antemano por su ayuda.</p>
+                                <div class="post-attachments">
+                                    <div class="attachment">
+                                        <img src="https://via.placeholder.com/300x200" alt="Ejemplo de organización">
+                                        <p>Mi organización actual</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-actions">
+                                <div class="action-buttons">
+                                    <button class="reaction-btn liked"><i class="fas fa-heart"></i> <span>32</span></button>
+                                    <button class="reaction-btn"><i class="fas fa-thumbs-down"></i> <span>2</span></button>
+                                    <button class="reply-btn"><i class="fas fa-reply"></i> Responder</button>
+                                </div>
+                                <div class="post-tags">
+                                    <span class="tag">organización</span>
+                                    <span class="tag">productividad</span>
+                                    <span class="tag">recordatorios</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Respuestas -->
+                    <div class="topic-replies">
+                        <h3>Respuestas <span class="reply-count">(24)</span></h3>
+                        
+                        <div class="post reply">
+                            <div class="post-sidebar">
+                                <div class="user-avatar">
+                                    <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Avatar de usuario">
+                                </div>
+                                <div class="user-info">
+                                    <h4>Ana Martínez</h4>
+                                    <p class="user-role">Moderador</p>
+                                    <p class="user-stats">348 publicaciones</p>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date">Publicado: 10 de octubre, 2023 - 16:15</span>
+                                </div>
+                                <div class="post-body">
+                                    <p>¡Hola Juan!</p>
+                                    <p>Te comparto lo que me ha funcionado a mí. Utilizo el método de las "3 P":</p>
+                                    <ol>
+                                        <li><strong>Priorizar:</strong> Clasifico mis recordatorios en Alta, Media y Baja prioridad.</li>
+                                        <li><strong>Programar:</strong> Asigno bloques de tiempo específicos en mi día para cada tipo de tarea.</li>
+                                        <li><strong>Progresar:</strong> Reviso al final del día lo que logré completar y ajusto para el día siguiente.</li>
+                                    </ol>
+                                    <p>Además, uso el código de colores que ofrece Kronoss para identificar visualmente cada categoría. ¡Ha mejorado mucho mi productividad!</p>
+                                </div>
+                                <div class="post-actions">
+                                    <div class="action-buttons">
+                                        <button class="reaction-btn"><i class="fas fa-heart"></i> <span>18</span></button>
+                                        <button class="reaction-btn"><i class="fas fa-thumbs-down"></i> <span>0</span></button>
+                                        <button class="reply-btn"><i class="fas fa-reply"></i> Responder</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post reply">
+                            <div class="post-sidebar">
+                                <div class="user-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Avatar de usuario">
+                                </div>
+                                <div class="user-info">
+                                    <h4>Carlos Rodríguez</h4>
+                                    <p class="user-role">Usuario Premium</p>
+                                    <p class="user-stats">87 publicaciones</p>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date">Publicado: 10 de octubre, 2023 - 17:30</span>
+                                </div>
+                                <div class="post-body">
+                                    <p>Yo utilizo la técnica Pomodoro junto con Kronoss. Divido mis tareas en bloques de 25 minutos y establezco recordatorios para cada bloque.</p>
+                                    <p>También te recomiendo usar la función de etiquetas para clasificar tus recordatorios. Por ejemplo:</p>
+                                    <ul>
+                                        <li>#urgente - Para tareas que deben completarse hoy</li>
+                                        <li>#proyecto1 - Para agrupar tareas relacionadas</li>
+                                        <li>#delegado - Para tareas que has asignado a otros</li>
+                                    </ul>
+                                    <p>Luego puedes filtrar fácilmente por estas etiquetas.</p>
+                                    <p>@<span class="mention">Juan Pérez</span> Espero que esto te ayude!</p>
+                                </div>
+                                <div class="post-actions">
+                                    <div class="action-buttons">
+                                        <button class="reaction-btn"><i class="fas fa-heart"></i> <span>12</span></button>
+                                        <button class="reaction-btn"><i class="fas fa-thumbs-down"></i> <span>1</span></button>
+                                        <button class="reply-btn"><i class="fas fa-reply"></i> Responder</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Respuesta anidada -->
+                        <div class="post reply nested">
+                            <div class="post-sidebar">
+                                <div class="user-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Avatar de usuario">
+                                </div>
+                                <div class="user-info">
+                                    <h4>Juan Pérez</h4>
+                                    <p class="user-role">Usuario Activo</p>
+                                    <p class="user-stats">124 publicaciones</p>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date">Publicado: 10 de octubre, 2023 - 18:05</span>
+                                </div>
+                                <div class="post-body">
+                                    <p>@<span class="mention">Carlos Rodríguez</span> Gracias por la sugerencia! No había pensado en usar la técnica Pomodoro con Kronoss. Definitivamente lo probaré.</p>
+                                    <p>Las etiquetas también me parecen una excelente idea para organizar mejor todo.</p>
+                                </div>
+                                <div class="post-actions">
+                                    <div class="action-buttons">
+                                        <button class="reaction-btn"><i class="fas fa-heart"></i> <span>5</span></button>
+                                        <button class="reaction-btn"><i class="fas fa-thumbs-down"></i> <span>0</span></button>
+                                        <button class="reply-btn"><i class="fas fa-reply"></i> Responder</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario para responder -->
+                    <div class="reply-form">
+                        <h3>Responder al tema</h3>
+                        <form id="post-reply-form">
+                            <div class="form-group">
+                                <div class="rich-editor">
+                                    <div class="editor-toolbar">
+                                        <button type="button" class="toolbar-btn" data-format="bold"><i class="fas fa-bold"></i></button>
+                                        <button type="button" class="toolbar-btn" data-format="italic"><i class="fas fa-italic"></i></button>
+                                        <button type="button" class="toolbar-btn" data-format="underline"><i class="fas fa-underline"></i></button>
+                                        <button type="button" class="toolbar-btn" data-format="link"><i class="fas fa-link"></i></button>
+                                        <button type="button" class="toolbar-btn" data-format="image"><i class="fas fa-image"></i></button>
+                                        <button type="button" class="toolbar-btn" data-format="list-ul"><i class="fas fa-list-ul"></i></button>
+                                        <button type="button" class="toolbar-btn" data-format="list-ol"><i class="fas fa-list-ol"></i></button>
+                                        <button type="button" class="toolbar-btn" data-format="mention"><i class="fas fa-at"></i></button>
+                                        <button type="button" class="toolbar-btn" data-format="quote"><i class="fas fa-quote-right"></i></button>
+                                    </div>
+                                    <textarea id="reply-content" placeholder="Escribe tu respuesta aquí..." required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="reply-attachments">Adjuntos (opcional)</label>
+                                <input type="file" id="reply-attachments" multiple>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="secondary-btn preview-btn">Vista previa</button>
+                                <button type="submit" class="primary-btn">Publicar Respuesta</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/script-foro.js"></script>
+</body>
+</html> 

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Mapping</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 20px;
+            overflow-x: auto;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            min-width: 1200px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            color: #1e293b;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .impact-map {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .actors-section {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .actor-branch {
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+        }
+        
+        .actor {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: bold;
+            min-width: 120px;
+            box-shadow: 0 3px 10px rgba(37, 99, 235, 0.3);
+        }
+        
+        .impacts-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .impact {
+            background: linear-gradient(135deg, #059669, #047857);
+            color: white;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-size: 14px;
+            max-width: 180px;
+            box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);
+        }
+        
+        .deliverables-section {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .deliverable {
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            max-width: 160px;
+            box-shadow: 0 2px 6px rgba(124, 58, 237, 0.3);
+        }
+        
+        .horizontal-line {
+            height: 2px;
+            width: 20px;
+            background-color: #64748b;
+            margin: 20px 0;
+        }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e2e8f0;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+        
+        .legend-actor { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
+        .legend-impact { background: linear-gradient(135deg, #059669, #047857); }
+        .legend-deliverable { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Impact Mapping</h1>
+            <p style="color: #64748b; font-size: 16px;">Actores → Impactos → Entregables</p>
+        </div>
+        
+        <div class="impact-map">
+            <!-- ACTORS -->
+            <div class="actors-section">
+                <!-- Actor 1: Usuarios Finales -->
+                <div class="actor-branch">
+                    <div class="actor">
+                        👥 USUARIOS FINALES
+                    </div>
+                    
+                    <div class="horizontal-line"></div>
+                    
+                    <div class="impacts-section">
+                        <div class="impact">
+                            💡 Acceden fácilmente a la información pública
+                        </div>
+                        <div class="impact">
+                            🔐 Se registran y mantienen sesiones activas
+                        </div>
+                        <div class="impact">
+                            📊 Consultan sus estadísticas personales
+                        </div>
+                        <div class="impact">
+                            🎮 Participan en sistema de gamificación
+                        </div>
+                        <div class="impact">
+                            💬 Interactúan en el foro comunitario
+                        </div>
+                    </div>
+                    
+                    <div class="horizontal-line"></div>
+                    
+                    <div class="deliverables-section">
+                        <div class="deliverable">Vista Pública (5 pts)</div>
+                        <div class="deliverable">Login/Register (8 pts)</div>
+                        <div class="deliverable">Vista de Usuario (13 pts)</div>
+                        <div class="deliverable">Panel Usuario (13 pts)</div>
+                        <div class="deliverable">Sistema Gamificación (13 pts)</div>
+                        <div class="deliverable">Estructura Foro (5 pts)</div>
+                        <div class="deliverable">Tema Foro (8 pts)</div>
+                        <div class="deliverable">Terminar Foro (5 pts)</div>
+                        <div class="deliverable">Login Google (13 pts)</div>
+                    </div>
+                </div>
+                
+                <!-- Actor 2: Administradores -->
+                <div class="actor-branch">
+                    <div class="actor">
+                        ⚙️ ADMINISTRADORES
+                    </div>
+                    
+                    <div class="horizontal-line"></div>
+                    
+                    <div class="impacts-section">
+                        <div class="impact">
+                            📈 Visualizan estadísticas globales del sistema
+                        </div>
+                        <div class="impact">
+                            🛠️ Gestionan usuarios y contenido (CRUD)
+                        </div>
+                        <div class="impact">
+                            🔍 Supervisan actividad de la comunidad
+                        </div>
+                        <div class="impact">
+                            📋 Administran configuraciones del sistema
+                        </div>
+                    </div>
+                    
+                    <div class="horizontal-line"></div>
+                    
+                    <div class="deliverables-section">
+                        <div class="deliverable">Vista Admin (40 pts)</div>
+                        <div class="deliverable">Panel Administrativo (13 pts)</div>
+                        <div class="deliverable">CRUD (20 pts)</div>
+                        <div class="deliverable">Local Storage (40 pts)</div>
+                    </div>
+                </div>
+                
+                <!-- Actor 3: Sistema -->
+                <div class="actor-branch">
+                    <div class="actor">
+                        💻 SISTEMA
+                    </div>
+                    
+                    <div class="horizontal-line"></div>
+                    
+                    <div class="impacts-section">
+                        <div class="impact">
+                            🗄️ Almacena y gestiona datos de forma eficiente
+                        </div>
+                        <div class="impact">
+                            🔗 Mantiene integridad relacional de datos
+                        </div>
+                        <div class="impact">
+                            ⚡ Procesa lógica de negocio backend
+                        </div>
+                        <div class="impact">
+                            🔒 Garantiza seguridad y autenticación
+                        </div>
+                    </div>
+                    
+                    <div class="horizontal-line"></div>
+                    
+                    <div class="deliverables-section">
+                        <div class="deliverable">Modelo Relacional (8 pts)</div>
+                        <div class="deliverable">Diagrama E-R (13 pts)</div>
+                        <div class="deliverable">Base SQL (8 pts)</div>
+                        <div class="deliverable">Conectar Java-MySQL (13 pts)</div>
+                        <div class="deliverable">Backend Clases (5 pts)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color legend-actor"></div>
+                <span>Actores</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color legend-impact"></div>
+                <span>Impactos</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color legend-deliverable"></div>
+                <span>Entregables</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kronosss</title>
+    <link rel="stylesheet" href="../CSS/style_main.css">
+    <link rel="stylesheet" href="../CSS/reminders.css">
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Kronosss - Gestión Inteligente del Tiempo</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <i class="fas fa-hourglass-half header-icon"></i>
+                <h1>Kronosss</h1>
+            </div>
+            <p class="slogan">Domina tu Tiempo con Inteligencia. Planificación Inteligente para una Vida Sin Límites</p>
+        </div>
+    </header>
+    <nav>
+    <div class="nav-container">
+        <div class="nav-links">
+            <ul>
+                <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#caracteristicas"><i class="fas fa-star"></i> Características</a></li>
+                <li><a href="#descargar"><i class="fas fa-download"></i> Descargar</a></li>
+                <li><a href="#crear-recordatorio"><i class="fas fa-bell"></i> Crear Recordatorio</a></li>
+                <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </div>
+        <div class="nav-auth">
+            <a href="../html/login.html" class="auth-button login"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+            <a href="../html/register.html" class="auth-button register"><i class="fas fa-user-plus"></i> Registrarse</a>
+        </div>
+    </div>
+</nav>
+    <main>
+        <div class="container">
+            <section id="inicio" class="feature-card">
+                <div class="section-icon">
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <h2>Bienvenido a Kronoss</h2>
+                <p>Kronoss está diseñado para transformar la manera en que gestionas tu tiempo. Con una interfaz elegante y extremadamente intuitiva, Kronoss no solo te ayuda a programar y organizar tus tareas importantes, sino que lo hace con una facilidad que convierte la gestión del tiempo en un placer.</p>
+            </section>
+            <section id="caracteristicas">
+                <h2><i class="fas fa-star"></i> Características Principales</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-bell feature-icon"></i>
+                        <h3>Recordatorios Personalizables</h3>
+                        <p>Ajusta las alertas según tus necesidades específicas.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-magic feature-icon"></i>
+                        <h3>Interfaz Intuitiva</h3>
+                        <p>Navega fácilmente y agrega recordatorios en segundos.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-mobile-alt feature-icon"></i>
+                        <h3>Notificaciones en Tiempo Real</h3>
+                        <p>Mantente al tanto de tus tareas importantes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-sync feature-icon"></i>
+                        <h3>Sincronización Multiplataforma</h3>
+                        <p>Accede a tus recordatorios desde cualquier dispositivo.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="descargar" class="feature-card">
+                <div class="section-icon">
+                    <i class="fas fa-download"></i>
+                </div>
+                <h2>Cómo Empezar</h2>
+                <p>Para comenzar a usar Kronoss, simplemente descarga la aplicación desde nuestro sitio web o tienda de aplicaciones. Kronoss está disponible para PC, web y dispositivos móviles.</p>
+                <div class="download-buttons">
+                    <a href="#" class="button"><i class="fab fa-windows"></i> Windows</a>
+                    <a href="#" class="button"><i class="fab fa-apple"></i> macOS</a>
+                    <a href="#" class="button"><i class="fab fa-google-play"></i> Android</a>
+                </div>
+            </section>
+<section id="crear-recordatorio">
+    <h2><i class="fas fa-plus-circle"></i> Gestión de Recordatorios</h2>
+    
+    <!-- Tabs para alternar entre crear y ver recordatorios -->
+    <div class="reminder-tabs">
+        <button id="tab-crear" class="tab-button active"><i class="fas fa-plus"></i> Crear Recordatorio</button>
+        <button id="tab-ver" class="tab-button"><i class="fas fa-list"></i> Mis Recordatorios</button>
+    </div>
+    
+    <!-- Formulario para crear/editar recordatorio -->
+    <div id="form-container" class="active-tab">
+        <form id="reminderForm" action="#" method="post" enctype="multipart/form-data">
+            <input type="hidden" id="reminderId" name="reminderId">
+            <fieldset>
+                <legend><i class="fas fa-user"></i> Datos Personales</legend>
+                <div class="form-group">
+                    <label for="fullName"><i class="fas fa-user"></i> Nombre Completo:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone"><i class="fas fa-phone"></i> Teléfono:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+57 600 000 000">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend><i class="fas fa-bell"></i> Detalles del Recordatorio</legend>
+                <div class="form-group">
+                    <label for="reminderTitle"><i class="fas fa-heading"></i> Título:</label>
+                    <input type="text" id="reminderTitle" name="reminderTitle" required placeholder="Título del recordatorio">
+                </div>
+                <div class="form-group">
+                    <label for="reminderType"><i class="fas fa-tasks"></i> Tipo de Recordatorio:</label>
+                    <select id="reminderType" name="reminderType" required>
+                        <option value="meeting">Reunión</option>
+                        <option value="call">Llamada</option>
+                        <option value="task">Tarea</option>
+                        <option value="event">Evento</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reminderCategory"><i class="fas fa-layer-group"></i> Categoría:</label>
+                    <select id="reminderCategory" name="reminderCategory">
+                        <option value="personal">Personal</option>
+                        <option value="salud">Salud</option>
+                        <option value="trabajo">Trabajo</option>
+                        <option value="familia">Familia</option>
+                        <option value="finanzas">Finanzas</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reminderContext"><i class="fas fa-lightbulb"></i> ¿Qué objetivo tiene este recordatorio?</label>
+                    <input type="text" id="reminderContext" name="reminderContext" placeholder="Ej. Preparar presentación, llamar a mamá">
+                </div>
+                <div class="form-group">
+                    <label for="reminderDate"><i class="fas fa-calendar"></i> Fecha:</label>
+                    <input type="date" id="reminderDate" name="reminderDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="reminderTime"><i class="fas fa-clock"></i> Hora:</label>
+                    <input type="time" id="reminderTime" name="reminderTime" required>
+                </div>
+                <div class="form-group">
+                    <label for="reminderPriority"><i class="fas fa-flag"></i> Prioridad:</label>
+                    <select id="reminderPriority" name="reminderPriority">
+                        <option value="low">Baja</option>
+                        <option value="medium" selected>Media</option>
+                        <option value="high">Alta</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="energyLevel"><i class="fas fa-battery-half"></i> Nivel de Energía Requerido:</label>
+                    <select id="energyLevel" name="energyLevel">
+                        <option value="low">Baja</option>
+                        <option value="medium">Media</option>
+                        <option value="high">Alta</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reminderRepeat"><i class="fas fa-redo"></i> Repetir:</label>
+                    <select id="reminderRepeat" name="reminderRepeat">
+                        <option value="none">Nunca</option>
+                        <option value="daily">Diariamente</option>
+                        <option value="weekly">Semanalmente</option>
+                        <option value="monthly">Mensualmente</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="notificationType"><i class="fas fa-bell-slash"></i> ¿Cómo quieres que te lo recordemos?</label>
+                    <select id="notificationType" name="notificationType">
+                        <option value="email">Correo electrónico</option>
+                        <option value="sms">SMS</option>
+                        <option value="push">Notificación móvil</option>
+                        <option value="whatsapp">Mensaje de WhatsApp</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="smartSuggestion"><i class="fas fa-robot"></i> ¿Sugerencia inteligente de hora?</label>
+                    <select id="smartSuggestion" name="smartSuggestion">
+                        <option value="no" selected>No</option>
+                        <option value="yes">Sí</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="peopleInvolved"><i class="fas fa-users"></i> ¿Quién más está involucrado?</label>
+                    <input type="text" id="peopleInvolved" name="peopleInvolved" placeholder="Ej. Juan Pérez, Ana Ruiz">
+                </div>
+                <div class="form-group">
+                    <label for="reminderMessage"><i class="fas fa-comment"></i> Mensaje:</label>
+                    <textarea id="reminderMessage" name="reminderMessage" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="reminderNotes"><i class="fas fa-sticky-note"></i> Notas:</label>
+                    <textarea id="reminderNotes" name="reminderNotes" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="reminderAttachment"><i class="fas fa-paperclip"></i> Adjuntar Archivo:</label>
+                    <input type="file" id="reminderAttachment" name="reminderAttachment">
+                </div>
+            </fieldset>
+
+            <div class="form-actions">
+                <button type="submit" id="saveReminder" class="submit-icon">
+                    <i class="fas fa-save icon"></i> <span id="submitButtonText">Crear Recordatorio</span>
+                </button>
+                <button type="button" id="cancelEdit" class="cancel-icon" style="display: none;">
+                    <i class="fas fa-times icon"></i> Cancelar
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Lista de recordatorios -->
+    <div id="list-container" class="reminder-list-container">
+        <div class="reminder-filters">
+            <input type="text" id="searchReminder" placeholder="Buscar recordatorios...">
+            <select id="filterCategory">
+                <option value="">Todas las categorías</option>
+                <option value="personal">Personal</option>
+                <option value="salud">Salud</option>
+                <option value="trabajo">Trabajo</option>
+                <option value="familia">Familia</option>
+                <option value="finanzas">Finanzas</option>
+                <option value="otro">Otro</option>
+            </select>
+            <select id="filterPriority">
+                <option value="">Todas las prioridades</option>
+                <option value="low">Baja</option>
+                <option value="medium">Media</option>
+                <option value="high">Alta</option>
+            </select>
+        </div>
+        
+        <div id="remindersList" class="reminders-list">
+            <!-- Los recordatorios se cargarán dinámicamente aquí -->
+            <div class="empty-state">
+                <i class="fas fa-calendar-times"></i>
+                <p>No tienes recordatorios. ¡Crea uno nuevo!</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de confirmación para eliminar -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3><i class="fas fa-exclamation-triangle"></i> Confirmar eliminación</h3>
+            <p>¿Estás seguro de que deseas eliminar este recordatorio?</p>
+            <p>Esta acción no se puede deshacer.</p>
+            <div class="modal-actions">
+                <button id="confirmDelete" class="delete-button">
+                    <i class="fas fa-trash"></i> Eliminar
+                </button>
+                <button id="cancelDelete" class="cancel-button">
+                    <i class="fas fa-times"></i> Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <i class="fas fa-hourglass-end footer-icon"></i>
+                <p>&copy; 2024 Kronoss. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="../js/reminders.js"></script>
+</body>
+</html>

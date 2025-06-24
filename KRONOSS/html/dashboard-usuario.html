@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kronoss - Dashboard de Usuario</title>
+    <link rel="stylesheet" href="../CSS/styles-usuario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Añadir preconexión para mejorar rendimiento -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://randomuser.me">
+</head>
+<body>
+    <!-- Overlay para menú móvil -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    
+    <div class="container">
+        <!-- Sidebar lateral izquierdo -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <h1>Kronoss</h1>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-chart-line"></i> Mi Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-check"></i> Mis Recordatorios</a></li>
+                    <li><a href="#"><i class="fas fa-plus-circle"></i> Crear Recordatorio</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> Próximos</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Configuración</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>© 2025 Kronoss</p>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="content">
+            <!-- Barra superior con perfil de usuario -->
+            <header class="top-bar">
+                <div class="mobile-toggle">
+                    <button id="sidebar-toggle"><i class="fas fa-bars"></i></button>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar recordatorios...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-profile">
+                    <div class="theme-toggle">
+                        <button id="theme-switch">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                    <div class="profile">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Foto de perfil">
+                        <div class="profile-info">
+                            <h3>Laura Sánchez</h3>
+                            <p>Usuario</p>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard principal -->
+            <div class="dashboard">
+                <h2>Mi Panel de Control</h2>
+                <p class="date">Última actualización: <span id="current-date">10 de octubre, 2023</span></p>
+
+                <!-- Tarjetas de estadísticas personales -->
+                <div class="stats-cards">
+                    <div class="card">
+                        <div class="card-icon total">
+                            <i class="fas fa-list"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Total Recordatorios</h3>
+                            <p class="number">24</p>
+                            <p class="trend positive"><i class="fas fa-arrow-up"></i> 3 nuevos esta semana</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon completed">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Completados</h3>
+                            <p class="number">18</p>
+                            <p class="trend positive"><i class="fas fa-arrow-up"></i> 5 completados ayer</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon pending">
+                            <i class="fas fa-hourglass-half"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Pendientes</h3>
+                            <p class="number">6</p>
+                            <p class="trend negative"><i class="fas fa-arrow-up"></i> 2 vencidos</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon efficiency">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Eficiencia</h3>
+                            <p class="number">75%</p>
+                            <p class="trend positive"><i class="fas fa-arrow-up"></i> 8% desde el mes pasado</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gamificación: Puntos, Nivel y Logros -->
+                <div class="gamification-section">
+                    <div class="gamification-header">
+                        <h3>Mi Progreso de Gamificación</h3>
+                    </div>
+                    <div class="gamification-streak" id="gam-streak">
+                        <i class="fas fa-fire"></i> Racha actual: <span id="streak-count">0</span> días
+                    </div>
+                    <div class="gamification-record" id="gam-record">
+                        <i class="fas fa-crown"></i> Récord personal: <span id="record-puntos">0</span> puntos
+                    </div>
+                    <div class="gamification-stats">
+                        <div class="gamification-points">
+                            <i class="fas fa-star"></i> <span id="gam-puntos">0</span> puntos
+                        </div>
+                        <div class="gamification-level">
+                            <i class="fas fa-medal"></i> Nivel <span id="gam-nivel">1</span>
+                        </div>
+                        <div class="gamification-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="gam-progreso" style="width: 0%"></div>
+                            </div>
+                            <span id="gam-progreso-texto">0/100</span> para el siguiente nivel
+                        </div>
+                    </div>
+                    <div class="gamification-achievements">
+                        <h4>Logros Desbloqueados</h4>
+                        <div id="gam-logros" class="logros-lista">
+                            <!-- Insignias aquí -->
+                        </div>
+                    </div>
+                    <div id="confetti-container"></div>
+                </div>
+
+                <!-- Gráficos y estadísticas detalladas -->
+                <div class="charts-container">
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Progreso Semanal</h3>
+                            <div class="chart-actions">
+                                <select>
+                                    <option>Esta semana</option>
+                                    <option>Semana pasada</option>
+                                    <option>Este mes</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <!-- Aquí iría un gráfico real con JavaScript -->
+                            <div class="chart-placeholder">
+                                <div class="bar" style="height: 40%;"></div>
+                                <div class="bar" style="height: 60%;"></div>
+                                <div class="bar" style="height: 45%;"></div>
+                                <div class="bar" style="height: 80%;"></div>
+                                <div class="bar" style="height: 65%;"></div>
+                                <div class="bar" style="height: 75%;"></div>
+                                <div class="bar" style="height: 85%;"></div>
+                            </div>
+                            <div class="chart-labels">
+                                <span>Lun</span>
+                                <span>Mar</span>
+                                <span>Mié</span>
+                                <span>Jue</span>
+                                <span>Vie</span>
+                                <span>Sáb</span>
+                                <span>Dom</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Distribución por Categoría</h3>
+                            <div class="chart-actions">
+                                <button class="refresh-btn"><i class="fas fa-sync-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <!-- Aquí iría un gráfico circular con JavaScript -->
+                            <div class="pie-chart-placeholder">
+                                <div class="slice slice1"></div>
+                                <div class="slice slice2"></div>
+                                <div class="slice slice3"></div>
+                                <div class="slice slice4"></div>
+                            </div>
+                            <div class="pie-chart-legend">
+                                <div class="legend-item"><span class="color-box color1"></span> Trabajo (40%)</div>
+                                <div class="legend-item"><span class="color-box color2"></span> Personal (35%)</div>
+                                <div class="legend-item"><span class="color-box color3"></span> Salud (15%)</div>
+                                <div class="legend-item"><span class="color-box color4"></span> Otros (10%)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Próximos recordatorios -->
+                <div class="recent-activity">
+                    <div class="section-header">
+                        <h3>Próximos Recordatorios</h3>
+                        <button>Ver Todo <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                    <table class="activity-table">
+                        <thead>
+                            <tr>
+                                <th>Título</th>
+                                <th>Categoría</th>
+                                <th>Fecha</th>
+                                <th>Prioridad</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Reunión con cliente</td>
+                                <td>Trabajo</td>
+                                <td>Hoy, 15:30</td>
+                                <td><span class="priority high">Alta</span></td>
+                                <td>
+                                    <button class="action-btn complete"><i class="fas fa-check"></i></button>
+                                    <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Llamar al médico</td>
+                                <td>Salud</td>
+                                <td>Mañana, 10:00</td>
+                                <td><span class="priority medium">Media</span></td>
+                                <td>
+                                    <button class="action-btn complete"><i class="fas fa-check"></i></button>
+                                    <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Pagar factura de luz</td>
+                                <td>Personal</td>
+                                <td>En 2 días</td>
+                                <td><span class="priority medium">Media</span></td>
+                                <td>
+                                    <button class="action-btn complete"><i class="fas fa-check"></i></button>
+                                    <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Entregar informe trimestral</td>
+                                <td>Trabajo</td>
+                                <td>En 3 días</td>
+                                <td><span class="priority high">Alta</span></td>
+                                <td>
+                                    <button class="action-btn complete"><i class="fas fa-check"></i></button>
+                                    <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Comprar regalo de cumpleaños</td>
+                                <td>Personal</td>
+                                <td>En 5 días</td>
+                                <td><span class="priority low">Baja</span></td>
+                                <td>
+                                    <button class="action-btn complete"><i class="fas fa-check"></i></button>
+                                    <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Progreso mensual -->
+                <div class="monthly-progress">
+                    <div class="section-header">
+                        <h3>Progreso Mensual</h3>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Completados</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Pendientes</span>
+                                <span>25%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill pending" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Meta mensual</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill goal" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html> 

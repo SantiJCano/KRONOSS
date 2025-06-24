@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #282828;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #282828;
+}
+
+.login-box {
+    position: relative;
+    width: 450px;
+    backdrop-filter: blur(25px);
+    border: 2px solid var(--Titulos-color);
+    border-radius: 15px;
+    padding: 7.5em 2.5em 4em 2.53em;
+    color: var(--Titulos-color);
+    box-shadow: 0px 0px 10px 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-box:hover {
+    box-shadow: 0px 0px 15px 4px rgba(255, 215, 15, 0.5);
+}
+
+:root {
+    --body-color: #282828;
+    --Titulos-color: #ffd700;
+    --Boton-color1: #daa621;
+    --Boton-color2: #a07e27;
+    --Border-color: #b7860f;
+    --Header-color: #2e2e2f;
+}
+
+.login-header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffd700;
+    width: 140px;
+    height: 70px;
+    border-radius: 0 0 20px 20px;
+}
+
+.login-blanco {
+    color: white;
+}
+
+.login-header span {
+    font-size: 29px;
+    color: #282828;
+}
+
+.login-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 50%;
+    background: transparent;
+    box-shadow: 15px 0 0 0 var(--Titulos-color);
+}
+
+.login-header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 30px;
+    height: 30px;
+    border-top-left-radius: 50%;
+    background: transparent;
+    box-shadow: -15px 0 0 0 var(--Titulos-color);
+}
+
+.input-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.input-field {
+    width: 100%;
+    height: 55px;
+    font-size: 16px;
+    background: transparent;
+    color: #ffd70f;
+    padding-inline: 20px 50px;
+    border: 2px solid var(--Titulos-color);
+    border-radius: 30px;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#username,
+#password {
+    margin-bottom: 10px;
+}
+
+.label {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    transition: .2s;
+}
+
+.input-field:focus ~ .label,
+.input-field:valid ~ .label {
+    position: absolute;
+    top: -10px;
+    font-size: 14px;
+    background-color: var(--Boton-color1);
+    border-radius: 30px;
+    color: #000000;
+    padding: 0 10px;
+}
+
+.icon {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    font-size: 20px;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--Boton-color1);
+    border-color: var(--Boton-color1);
+}
+
+input[type="checkbox"] {
+    accent-color: var(--Boton-color1);
+}
+
+.input-submit {
+    width: 100%;
+    height: 50px;
+    background: var(--Boton-color1);
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.input-submit:hover {
+    background-color: var(--Border-color);
+}
+
+.register {
+    text-align: center;
+}
+
+.register a {
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 564px) {
+    .wrapper {
+        padding: 20px;
+    }
+
+    .login-box {
+        width: 100%;
+        padding: 3em 2em;
+    }
+
+    .input-field {
+        font-size: 14px;
+    }
+
+    .login-header span {
+        font-size: 22px;
+    }
+
+    .input-submit {
+        font-size: 14px;
+    }
+}

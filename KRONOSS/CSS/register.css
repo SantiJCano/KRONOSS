@@ -1,0 +1,235 @@
+/* styles.css */
+
+/* Animaciones de entrada */
+@keyframes slide-up {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animación para los íconos de los campos de entrada */
+@keyframes icon-pop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Animación para el efecto de onda en el botón de registro */
+@keyframes wave-effect {
+    0% {
+        transform: scale(0);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --body-color: #282828;
+    --Titulos-color: #ffd700;
+    --Boton-color1: #daa621;
+    --Boton-color2: #a07e27;
+    --Border-color: #b7860f;
+    --Header-color: #2e2e2f;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--body-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: slide-up 0.6s ease-out; /* Animación para la aparición de la página */
+}
+
+.container {
+    background: var(--body-color);
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px 2px;
+    color: var(--Titulos-color);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--Titulos-color);
+    animation: slide-up 0.5s ease-out; /* Animación de aparición */
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: var(--Titulos-color);
+    text-align: center;
+    animation: slide-up 0.8s ease-out;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative; /* Para posicionar el ícono */
+    animation: slide-up 1s ease-out; /* Animación de los campos de entrada */
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--Boton-color1);
+    animation: slide-up 1s ease-out;
+}
+
+input {
+    padding: 10px 1px 10px 40px; /* Espacio para el ícono */
+    border: 2px solid var(--Titulos-color);
+    border-radius: 15px;
+    width: 100%;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background: var(--body-color);
+    color: var(--Titulos-color);
+    margin-bottom: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    animation: icon-pop 0.8s ease-out; /* Animación de los íconos */
+}
+
+input:focus {
+    border-color: var(--Titulos-color);
+    outline: none;
+    box-shadow: 0 0 5px var(--Titulos-color);
+}
+
+input:focus-visible {
+    box-shadow: 0 0 5px 2px var(--Titulos-color);
+}
+
+.register {
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--Boton-color1); 
+    color: black; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
+    position: relative; /* Para colocar la animación de onda */
+    overflow: hidden;
+}
+
+.register:hover {
+    background-color: var(--Boton-color2); 
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.register:active {
+    animation: wave-effect 0.5s ease-out forwards; /* Efecto de onda al hacer clic */
+}
+
+.social-login {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.social-button.google {
+    background-color: #db4437;
+}
+
+.social-button.facebook {
+    background-color: #4267b2;
+}
+
+.social-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+label i {
+    margin-right: 8px; 
+    color: var(--Titulos-color); 
+}
+
+/* Responsividad para móviles */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    .register {
+        font-size: 14px;
+    }
+}
+
+.custom-google-btn {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  color: #444;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 16px;
+  padding: 10px 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: background 0.2s;
+  margin: 10px auto;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+.custom-google-btn img {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+.custom-google-btn:hover {
+  background: #f7f7f7;
+}
